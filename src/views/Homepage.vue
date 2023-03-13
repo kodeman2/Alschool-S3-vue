@@ -23,7 +23,7 @@
   <div data-aos="zoom-in"  data-aos-duration="1500" class="flex flex-col mt-20">
     <div  data-aos="fade-right" data-aos-duration="2500" class="flex flex-col">
      
-      <p  class=" text-6xl font-medium w-full">hello, welcome to my <span class="text-[#0cce6b]">Github</span> portfolio.</p>
+      <p  class=" text-6xl font-medium w-full">hello, welcome to my <a  href="https://github.com/kodeman2" class="text-[#0cce6b] ">Github</a> portfolio.</p>
       <button @click="scrollToContact" class="mr-auto bg-[#0cce6b] text-[#000] text-base font-medium px-8 py-3 rounded-lg mt-10">Contact Me</button>
     </div>
 
