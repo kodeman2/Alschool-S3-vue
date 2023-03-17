@@ -39,6 +39,7 @@
 </template>
 
 <script>
+
 import axios from 'axios';
 
 export default {
@@ -47,13 +48,17 @@ export default {
       repository: {},
     };
   },
+
   async created() {
     try {
       const response = await axios.get(
+        
         `https://api.github.com/repos/kodeman2/${this.$route.params.name}`
       );
+      // response handling
       this.repository = response.data;
       console.log(response.data)
+      // error handling
     } catch (error) {
       console.error(error);
     }

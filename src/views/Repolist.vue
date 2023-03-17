@@ -41,6 +41,7 @@ export default{
    totalPages: 1,
   };
  },
+
  async mounted (){
   await this.getRepositories(this.currentPage);
  },

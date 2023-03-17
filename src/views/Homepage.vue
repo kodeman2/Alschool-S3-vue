@@ -24,6 +24,7 @@
     <div  data-aos="fade-right" data-aos-duration="2500" class="flex flex-col">
      
       <p  class=" text-6xl font-medium w-full">Hello, welcome to my <a  href="https://github.com/kodeman2" class="text-[#0cce6b] ">Github</a> portfolio.</p>
+      
       <button @click="scrollToContact" class="mr-auto bg-[#0cce6b] text-[#000] text-base font-medium px-8 py-3 rounded-lg mt-10">Contact Me</button>
     </div>
 
@@ -43,7 +44,7 @@
 
       </div>
       <div>
-       <img :src= "data.avatar_url" alt="profile-picture" class="w-64 h-64 rounded-full"/>
+       <img :src= "data.avatar_url" alt="profile-picture" class="w-64 h-64 rounded-full hover:border-2 border-[#0cce6b]"/>
       </div>
     </div>
 
@@ -92,11 +93,13 @@ export default {
  components: {
  Repolist,
  },
+//  data
  data() {
  return {
   data:{},
  };
  },
+//  scroll to repos and contact me section
  methods: {
     scrollToRepos(){
       this.$refs['repos'].scrollIntoView({behavior: "smooth"})
@@ -106,6 +109,7 @@ export default {
     },
 
   },
+  // fetch data from github api using axios
  mounted() {
     axios
       .get("https://api.github.com/users/kodeman2", {
@@ -113,10 +117,12 @@ export default {
           Accept: "application/json",
         },
       })
+      // response handling
       .then((response) => {
         this.data = response.data;
         console.log(response.data);
       })
+      // error handling
       .catch((error) => {
         console.log(error);
       });
