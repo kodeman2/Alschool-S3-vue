@@ -36,7 +36,7 @@
         ">Github username :{{ data.login }}</p>
         <p>Location: {{ data.location }}</p>
         <p> Repositories: {{ data.public_repos }}</p>
-        <div class="flex flex-row gap-4 mt-3 mr-auto p-5 rounded-lg border-2 border-[#0cce6b]">
+        <div class="flex flex-row gap-4 mt-3 mr-auto p-5 rounded-lg border-2 border-[#0cce6b] ">
 
           <p>Followers: {{ data.followers }}</p>
           <p>Following: {{ data.following }}</p>
